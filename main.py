@@ -23,9 +23,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6841462459:AAF6O_r-rJ3Gixl-4ZlHnzlxL-B_5HLSlpw",
-             api_id= 25984163,
-             api_hash= "ef8b083047453358ef27bf889e8de82c")
+             bot_token= "7166257969:AAFbVtNiIEPqgaH8mDW3ymED0P7bJPAhZ-k",
+             api_id= 27498866,
+             api_hash= "96fbb6ad2e11ab04e83ca09ef3f42455")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["TXT"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["rohit"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
     input: Message = await bot.listen(editable.chat.id)
